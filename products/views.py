@@ -11,7 +11,7 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 from django.db.models import Q
 from django.utils import timezone
 from .models import *
-# from .serializers import *
+from .serializers import *
 from django.contrib.auth.models import User
 from django.db.models import Q
 from django.utils import timezone
