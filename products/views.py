@@ -21,3 +21,22 @@ def current_datetime(request):
     now = datetime.datetime.now()
     html = "<html><body>It is now %s.</body></html>" % now
     return HttpResponse(html)
+
+
+class ProductisImageView(APIView):
+    # authentication_classes=[JWTAuthentication, ]
+    def get(self, request):
+        productimg_obj = ProductImage.objects.all()
+        product_serializer = ProductImageSerializer(
+            productimg_obj, many=True).data
+        return Response(product_serializer)
+
+class ProductisView(APIView):
+    def get(self, request):
+        product_obj = Product.objects.all()
+        product_serializer = ProductSerializer(
+            product_obj, many=True).data
+        return Response(product_serializer)
+
+
+

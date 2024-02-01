@@ -64,17 +64,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'airbnb_backend.wsgi.application'
 # RestFramework
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        # 'rest_framework.permissions.AllowAny',
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ),
-    'DEFAULT_PERMISSION_CLASSES': [
-        # 'rest_framework.permissions.IsAuthenticatedOrReadOnly'
-        'rest_framework.permissions.AllowAny',
-    ],
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#         'rest_framework.permissions.AllowAny',
+#         # 'rest_framework_simplejwt.authentication.JWTAuthentication',
+#     ),
+#     'DEFAULT_PERMISSION_CLASSES': [
+#         # 'rest_framework.permissions.IsAuthenticatedOrReadOnly'
+#         'rest_framework.permissions.AllowAny',
+#     ],
    
-}
+# }
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -136,7 +136,10 @@ CORS_ORIGIN_WHITELIST = (
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
 ]
-CORS_URLS_REGEX = r'^/api.*'
+# Update CORS settings temporarily
+# CORS_ORIGIN_ALLOW_ALL = True
+
+# CORS_URLS_REGEX = r'^/api.*'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

@@ -9,4 +9,7 @@ from .views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',current_datetime),
+    path('productsimg/', ProductisImageView.as_view()),
+    path('products/', ProductisView.as_view()),
 ]
+
